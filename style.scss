@@ -1,0 +1,134 @@
+// Define variables for primary and secondary colors.
+// Use these variables to style headings, paragraphs, links, and background colors.
+// Use at least one SCSS nesting and inheritance.
+// Apply some basic responsive design (e.g., adjust the layout for mobile and desktop screens)
+
+//Making deafult values for margins and padding for easier control over the style
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Creating variables for colors
+// variables can also be created with "$" in scss
+:root {
+  --primary-color: #757083;
+  --secondary-color: #1b7c87;
+  --font-color: #ffdb15;
+  --red-color: #ed474a;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background-color: var(--primary-color);
+}
+
+.header {
+  background-color: var(--secondary-color);
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    // SCSS nesting
+    li {
+      margin: 0.5rem 0;
+      a {
+        color: var(--font-color);
+        text-decoration: none;
+        padding: 0.5rem;
+        &:hover {
+          background-color: var(--primary-color);
+          color: var(--red-color);
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  display: flex;
+  color: var(--font-color);
+  padding: 2rem;
+  section {
+    max-width: 50%;
+    padding: 2rem;
+  }
+}
+.form-input {
+  border: none;
+  border-radius: 5px;
+  padding: 3px 2px;
+  margin: 2px;
+}
+button {
+  padding: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: 3px;
+  cursor: pointer;
+  color: var(--font-color);
+}
+.color-btn {
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  h4 {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+  }
+}
+
+//adding responsive design
+@media (max-width: 600px) {
+  body {
+    background-color: var(--primary-color);
+  }
+  .header {
+    padding: 0.1rem;
+    ul {
+      margin: 0.1rem;
+      display: block;
+      text-align: center;
+      li {
+        padding: 0.5rem;
+      }
+    }
+  }
+  .main-container {
+    display: block;
+    text-align: center;
+    padding-bottom: 4rem;
+    section {
+      max-width: 100%;
+    }
+
+    button {
+      display: block;
+      margin: 1rem auto;
+      font-size: 1.3rem;
+    }
+  }
+  .form {
+    align-items: center;
+    justify-content: center;
+    input {
+      margin-top: 1rem;
+    }
+  }
+}

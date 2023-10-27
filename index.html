@@ -1,0 +1,72 @@
+<!-- 
+    A title in the <head> section.
+A header section with a navigation menu.
+A main content section with at least two paragraphs of text.
+A footer with your name and the current year.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship task</title>
+    <!-- Html does not support .scss file, i made it by using compiler extension -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <ul>
+          <!-- Navigation bar inside header -->
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">My Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <!-- Section with two paragraphs and buttons -->
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+          perferendis unde quibusdam odit rerum iusto. Nobis veritatis
+          perspiciatis, unde quo repudiandae placeat vero deserunt mollitia amet
+          quibusdam, a aspernatur tempore.
+        </p>
+        <form class="form">
+          <input
+            type="text"
+            id="formInput"
+            class="form-input"
+            placeholder="Write something..."
+          />
+          <button type="button" id="formButton">Submit</button>
+          <div id="formOutput" class="form-output"></div>
+        </form>
+      </section>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quod
+          nobis sit, minus non molestiae libero et totam vel accusamus. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Porro nihil magni
+          dolores voluptatum suscipit fugit asperiores quam tempore illo aliquid
+          ea, ad ab vero quo tenetur ducimus accusamus eos! Exercitationem
+          perspiciatis est maiores, quisquam, quibusdam asperiores, vero labore
+          corrupti beatae iure fugiat hic obcaecati modi natus saepe totam
+          impedit placeat quod numquam. Rerum illum commodi molestiae hic nobis
+        </p>
+        <button id="changeColorButton" class="color-btn">
+          Change background color
+        </button>
+        <!-- Can also be used different div for the buttons for more flexibility -->
+      </section>
+    </main>
+    <footer>
+      <!-- A footer with my name and current year -->
+      <h4>Jovan Magdevski &copy; | 2023</h4>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
